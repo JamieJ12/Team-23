@@ -1,6 +1,15 @@
 ### START FUNCTION
 def extract_municipality_hashtags(df):
-
+    # Dictionary mapping official municipality twitter handles to the municipality name
+    mun_dict = {
+        '@CityofCTAlerts' : 'Cape Town',
+        '@CityPowerJhb' : 'Johannesburg',
+        '@eThekwiniM' : 'eThekwini' ,
+        '@EMMInfo' : 'Ekurhuleni',
+        '@centlecutility' : 'Mangaung',
+        '@NMBmunicipality' : 'Nelson Mandela Bay',
+        '@CityTshwane' : 'Tshwane'
+        }
     #Get municipalities list of keys
     key = list(mun_dict.keys())
 
