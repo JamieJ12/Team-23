@@ -5,8 +5,6 @@ def five_num_summary(items):
 
     #Get mean,median,var,std,min and max using np_items
     median = np.median(np_items)
-#     q1 = np.percentile(np_items,25,interpolation = 'midpoint')
-#     q3 = np.percentile(np_items,75,interpolation = 'midpoint')
     q1 = np.quantile(np_items, 0.25)
     q3 = np.quantile(np_items, 0.75)
     mn = np.min(np_items)
