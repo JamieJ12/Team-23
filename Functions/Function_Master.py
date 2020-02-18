@@ -1,6 +1,6 @@
 # Function 1
 def dictionary_of_metrics(items):
-
+    import numpy as np
     #Create a numpy array np_items from items
     np_items = np.array(items)
 
