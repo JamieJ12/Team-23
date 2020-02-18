@@ -1,4 +1,3 @@
-### START FUNCTION
 def word_splitter(df):
 
     # Get Tweets from DataFrame
@@ -11,5 +10,3 @@ def word_splitter(df):
     df["Split Tweets"] = split_tweets
 
     return df
-
-### END FUNCTION

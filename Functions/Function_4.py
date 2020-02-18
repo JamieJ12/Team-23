@@ -1,4 +1,3 @@
-### START FUNCTION
 def extract_municipality_hashtags(df):
     # Dictionary mapping official municipality twitter handles to the municipality name
     mun_dict = {
@@ -48,5 +47,3 @@ def extract_municipality_hashtags(df):
     df.loc[index_hash,"hashtags"] = final
 
     return df
-
-### END FUNCTION

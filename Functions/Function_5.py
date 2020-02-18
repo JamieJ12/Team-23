@@ -1,4 +1,3 @@
-### START FUNCTION
 def number_of_tweets_per_day(df):
 
     # Isolate Date from DateTime Format
@@ -9,5 +8,3 @@ def number_of_tweets_per_day(df):
 
     # Group By Date and Sum Tweets
     return df.groupby(["Date"]).sum()
-
-### END FUNCTION
