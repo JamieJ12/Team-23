@@ -15,7 +15,7 @@ def extract_municipality_hashtags(df):
     # Add np.nan to all values for municipality column
     df["municipality"] = np.nan
 
-    # find tags corresponding to different municipalities and add them accordingly
+    # Find tags corresponding to different municipalities and add them accordingly
     for k in key:
         df.loc[df["Tweets"].str.contains(k),"municipality"] = mun_dict[k]
 
@@ -43,7 +43,7 @@ def extract_municipality_hashtags(df):
     # Add np.nan to all values for hashtags column
     df["hashtags"] = np.nan
 
-    # find indices corresponding to different Tweets and add hashtags accordingly
+    # Find indices corresponding to different Tweets and add hashtags accordingly
     df.loc[index_hash,"hashtags"] = final
 
     return df
