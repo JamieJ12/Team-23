@@ -1,4 +1,3 @@
-### START FUNCTION
 def dictionary_of_metrics(items):
 
     #Create a numpy array np_items from items
@@ -18,6 +17,4 @@ def dictionary_of_metrics(items):
             'var': round(var,2),
             'std': round(std,2),
             'min': round(mn,2),
-            'max': round(mx,2)}
-
-### END FUNCTION
+            'max': round(mx,2)}            

@@ -1,4 +1,3 @@
-### START FUNCTION
 def five_num_summary(items):
 
     #Create a numpy array np_items from items
@@ -19,5 +18,3 @@ def five_num_summary(items):
             'min': round(mn,2),
             'q1': round(q1,2),
             'q3': round(q3,2),}
-
-### END FUNCTION

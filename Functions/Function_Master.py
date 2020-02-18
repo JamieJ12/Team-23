@@ -1,3 +1,135 @@
+# Function 1
+def dictionary_of_metrics(items):
+
+    #Create a numpy array np_items from items
+    np_items = np.array(items)
+
+    #Get mean,median,var,std,min and max using np_items
+    mean = np.mean(np_items)
+    median = np.median(np_items)
+    var = np.var(np_items,ddof=1)
+    std = np.std(np_items,ddof=1)
+    mn = np.min(np_items)
+    mx = np.max(np_items)
+
+    #Return the appropriate Dictionary
+    return {'mean': round(mean,2),
+            'median': round(median,2),
+            'var': round(var,2),
+            'std': round(std,2),
+            'min': round(mn,2),
+            'max': round(mx,2)}
+
+
+# Function 2
+def five_num_summary(items):
+
+    #Create a numpy array np_items from items
+    np_items = np.array(items)
+
+    #Get mean,median,var,std,min and max using np_items
+    median = np.median(np_items)
+    q1 = np.quantile(np_items, 0.25)
+    q3 = np.quantile(np_items, 0.75)
+    mn = np.min(np_items)
+    mx = np.max(np_items)
+
+    #Return the appropriate Dictionary
+    return {'max': round(mx,2),
+            'median': round(median,2),
+            'min': round(mn,2),
+            'q1': round(q1,2),
+            'q3': round(q3,2),}
+
+
+# Function 3
+def date_parser(dates):
+
+    # Split DateTime and Isolate Date
+    return [date.split()[0] for date in dates]
+
+
+# Function 4
+def extract_municipality_hashtags(df):
+    # Dictionary mapping official municipality twitter handles to the municipality name
+    mun_dict = {
+        '@CityofCTAlerts' : 'Cape Town',
+        '@CityPowerJhb' : 'Johannesburg',
+        '@eThekwiniM' : 'eThekwini' ,
+        '@EMMInfo' : 'Ekurhuleni',
+        '@centlecutility' : 'Mangaung',
+        '@NMBmunicipality' : 'Nelson Mandela Bay',
+        '@CityTshwane' : 'Tshwane'
+        }
+    #Get municipalities list of keys
+    key = list(mun_dict.keys())
+
+    # Add np.nan to all values for municipality column
+    df["municipality"] = np.nan
+
+    # Find tags corresponding to different municipalities and add them accordingly
+    for k in key:
+        df.loc[df["Tweets"].str.contains(k),"municipality"] = mun_dict[k]
+
+
+    ######################################################
+
+    # Make a list of all the Tweets with a #
+    hashtags_tweets = list(df.loc[df["Tweets"].str.contains("#")]["Tweets"])
+
+    # Get indices list of all the Tweets with a #
+    index_hash = list(df.loc[df["Tweets"].str.contains("#")].index)
+
+    # Isolate # words in each Tweet
+    final = []
+    for tweet in hashtags_tweets:
+        tweet = tweet.split()
+
+        hash_words = []
+        for word in tweet:
+            if word.startswith("#"):
+                hash_words.append(word.lower())
+
+        final.append(hash_words)
+
+    # Add np.nan to all values for hashtags column
+    df["hashtags"] = np.nan
+
+    # Find indices corresponding to different Tweets and add hashtags accordingly
+    df.loc[index_hash,"hashtags"] = final
+
+    return df
+
+
+# Function 5
+def number_of_tweets_per_day(df):
+
+    # Isolate Date from DateTime Format
+    df["Date"] = date_parser(df["Date"].to_list())
+
+    #Set all Tweets to 1 so they can be counted
+    df["Tweets"] = 1
+
+    # Group By Date and Sum Tweets
+    return df.groupby(["Date"]).sum()
+
+
+# Function 6
+def word_splitter(df):
+
+    # Get Tweets from DataFrame
+    tweets = df["Tweets"].to_list()
+
+    # Split the Tweets into lowercase words
+    split_tweets = [tweet.lower().split() for tweet in tweets]
+
+    # Add Split Tweets to own column
+    df["Split Tweets"] = split_tweets
+
+    return df
+
+
+# Function 7
 def stop_words_remover(df):
     # dictionary of english stopwords
     stop_words_dict = {
