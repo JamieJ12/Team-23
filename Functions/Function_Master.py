@@ -1,6 +1,10 @@
+# Add Imports
+import numpy as np
+import pandas as pd
+
 # Function 1
 def dictionary_of_metrics(items):
-    import numpy as np
+
     #Create a numpy array np_items from items
     np_items = np.array(items)
 
@@ -51,7 +55,7 @@ def date_parser(dates):
 
 # Function 4
 def extract_municipality_hashtags(df):
-    import pandas as pd
+
     # Dictionary mapping official municipality twitter handles to the municipality name
     mun_dict = {
         '@CityofCTAlerts' : 'Cape Town',
