@@ -5,7 +5,7 @@ The role was to build 7 functions using python which will need to process both n
 ## Functions
 
 ### Function_1
-Function calculates the mean, median, variance, standard deviation,
+  Function calculates the mean, median, variance, standard deviation,
   minimum and maximum of the list of items.
 
   The input is a list of integers and it outputs a dictionary.
@@ -15,13 +15,12 @@ Function calculates the mean, median, variance, standard deviation,
     items(list): list of integers
 
   Returns:
-
-    dictionary: with keys -- 'mean', 'median', 'std', 'var', 'min', and 'max',
+    Dictionary: with keys -- 'mean', 'median', 'std', 'var', 'min', and 'max',
     corresponding to the mean, median, standard deviation, variance,
     minimum and maximum of the input list
-
     Example:
     Input:
+    
     >>>gauteng = [39660.0,
                        36024.0,
                        32127.0,
@@ -36,13 +35,16 @@ Function calculates the mean, median, variance, standard deviation,
                        25275.0]
 
     >>>dictionary_of_metrics(gauteng)
-    Output: {'mean': 26244.42,
+    ```
+    Output:
+    ```bash
+    {'mean': 26244.42,
            'median': 24403.5,
            'var': 108160153.17,
            'std': 10400.01,
            'min': 8842.0,
            'max': 39660.0}
-
+    ```
 
 
 ### Function_2
@@ -64,6 +66,7 @@ The Function takes in a list of integers and returns a dictionary
 
   Example:
   Input:
+  ```bash
   >>>gauteng = [39660.0,
                 36024.0,
                 32127.0,
@@ -84,7 +87,7 @@ The Function takes in a list of integers and returns a dictionary
       'min': 8842.0,
       'q1': 18653.0,
       'q3': 36372.0}
-
+  ```
 
 ### Function_3
 The Function inputs a
@@ -213,7 +216,9 @@ The function calculates the number of tweets that were posted per day.
   4	#ESKOMFREESTATE #MEDIASTATEMENT : ESKOM SUSPEN...	2019-11-29 12:17:43
 
   >>>number_of_tweets_per_day(twitter_df.copy())
+  ```
   Output
+  ```bash
               Tweets
   Date
   2019-11-20	18
@@ -257,7 +262,9 @@ The function splits the sentences in a dataframe's column into
 
 
   >>>word_splitter(twitter_df.copy())
+  ```
   Output
+  ```bash
       Tweets	                                        Date	            Split Tweets
   0	@BongaDlulane Please send an email to mediades...	2019-11-29 12:50:54	[@bongadlulane, please, send, an, email, to, m...
   1	@saucy_mamiie Pls log a call on 0860037566	      2019-11-29 12:46:53	[@saucy_mamiie, pls, log, a, call, on, 0860037...
@@ -298,7 +305,9 @@ Function removes english stop words from a tweet.
   4	#ESKOMFREESTATE #MEDIASTATEMENT : ESKOM SUSPEN...	2019-11-29 12:17:43
 
   >>>stop_words_remover(twitter_df.copy())
+  ```
   Output
+  ```bash
     Tweets	                                            Date	            Without Stop Words
   0	@BongaDlulane Please send an email to mediades...	2019-11-29 12:50:54	[@bongadlulane, send, email, mediadesk@eskom.c...
   1	@saucy_mamiie Pls log a call on 0860037566	        2019-11-29 12:46:53	[@saucy_mamiie, pls, log, 0860037566]
@@ -311,7 +320,6 @@ Function removes english stop words from a tweet.
   197	@ArthurGodbeer Is the power restored as yet?	    2019-11-20 10:07:59	[@arthurgodbeer, power, restored, yet?]
   198	@MuthambiPaulina @SABCNewsOnline @IOL @eNCA @e...	2019-11-20 10:07:41	[@muthambipaulina, @sabcnewsonline, @iol, @enc...
   199	RT @GP_DHS: The @GautengProvince made a commit...	2019-11-20 10:00:09	[rt, @gp_dhs:, @gautengprovince, commitment, e...
-  """
   ```
 
 
