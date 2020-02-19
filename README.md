@@ -20,7 +20,7 @@ The role was to build 7 functions using python which will need to process both n
     minimum and maximum of the input list
     Example:
     Input:
-    
+
     >>>gauteng = [39660.0,
                        36024.0,
                        32127.0,
