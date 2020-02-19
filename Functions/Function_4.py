@@ -1,4 +1,23 @@
 def extract_municipality_hashtags(df):
+    """The function inputs pandas dataframe and
+
+    returns a modified dataframe that includes two new columns
+
+    that contain information about the municipality and hashtag of the tweet.
+
+
+    Arguments:
+
+    The variable 'df' is the pandas input.
+
+    With added column of extracted hashtags from each tweet
+
+    using 'mun_dict' dictionary and inserts
+
+    the result into a new column named 'municipality' in the same dataframe.
+
+    """
+
     # Dictionary mapping official municipality twitter handles to the municipality name
     mun_dict = {
         '@CityofCTAlerts' : 'Cape Town',

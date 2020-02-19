@@ -1,5 +1,21 @@
 def dictionary_of_metrics(items):
+    """
+    Function calculates the mean, median, variance, standard deviation,
+    minimum and maximum of the list of items.
 
+    The input is a list of integers and it ouputs a dictionary.
+
+    Arguments:
+
+      items(list): list of intergers
+
+    Returns:
+
+      dictinary: with keys -- 'mean', 'median', 'std', 'var', 'min', and 'max',
+      corresponding to the mean, median, standard deviation, variance,
+      minimum and maximum of the input list
+
+    """
     #Create a numpy array np_items from items
     np_items = np.array(items)
 
@@ -17,4 +33,4 @@ def dictionary_of_metrics(items):
             'var': round(var,2),
             'std': round(std,2),
             'min': round(mn,2),
-            'max': round(mx,2)}            
+            'max': round(mx,2)}

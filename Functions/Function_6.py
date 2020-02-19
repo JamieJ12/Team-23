@@ -1,4 +1,20 @@
 def word_splitter(df):
+    """
+
+    The function splits the sentences in a dataframe's column into
+
+    a list of the separate words.:
+
+    Arguments:
+
+    List is in the column named 'Splits Tweets'
+
+    Fuction takes in dataframe in the column named 'Tweets'
+
+
+    Returns a modified dataframe with a new column of a list of individual words
+
+    """
 
     # Get Tweets from DataFrame
     tweets = df["Tweets"].to_list()

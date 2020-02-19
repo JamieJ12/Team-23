@@ -1,5 +1,22 @@
 def five_num_summary(items):
+    """
+    The Function takes in a list of integers and returns a dictionary
 
+    of the 5 number summary.
+
+    Arguments:
+
+      items (list): List of integers
+
+    The function returns a dictionary with keys: 'max', 'median', 'min',
+
+    'q1', and 'q3', corresponding to the maximum, median, minimum,
+
+    first quartile and
+
+    third quartile, respectively.
+
+    """
     #Create a numpy array np_items from items
     np_items = np.array(items)
 

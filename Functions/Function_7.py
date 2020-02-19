@@ -1,4 +1,20 @@
 def stop_words_remover(df):
+
+    """
+    Function removes english stop words from a tweet.
+
+
+    Arguments:
+
+    Fucntion takes in pandas dataframe
+
+    It tokenises the sentences according to the definition in function 6
+
+
+    Returns a modified dataframe with an added column of tweets without stopwords.
+
+    """
+
     # dictionary of english stopwords
     stop_words_dict = {
         'stopwords':[
