@@ -51,6 +51,7 @@ def date_parser(dates):
 
 # Function 4
 def extract_municipality_hashtags(df):
+    import pandas as pd
     # Dictionary mapping official municipality twitter handles to the municipality name
     mun_dict = {
         '@CityofCTAlerts' : 'Cape Town',
