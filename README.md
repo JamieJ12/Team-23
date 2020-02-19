@@ -15,7 +15,6 @@ The role was to build 7 functions using python which will need to process both n
     items(list): list of integers
 
   Returns:
-
     dictionary: with keys -- 'mean', 'median', 'std', 'var', 'min', and 'max',
     corresponding to the mean, median, standard deviation, variance,
     minimum and maximum of the input list
