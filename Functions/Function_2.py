@@ -16,6 +16,29 @@ def five_num_summary(items):
 
     third quartile, respectively.
 
+    Example:
+    Input:
+    >>>gauteng = [39660.0,
+                  36024.0,
+                  32127.0,
+                  39488.0,
+                  18422.0,
+                  23532.0,
+                  8842.0,
+                  37416.0,
+                  16156.0,
+                  18730.0,
+                  19261.0,
+                  25275.0]
+
+    >>>five_num_summary(gauteng)
+    Output:
+        {'max': 39660.0,
+        'median': 24403.5,
+        'min': 8842.0,
+        'q1': 18653.0,
+        'q3': 36372.0}
+
     """
     #Create a numpy array np_items from items
     np_items = np.array(items)

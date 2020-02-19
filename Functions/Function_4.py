@@ -1,20 +1,48 @@
 def extract_municipality_hashtags(df):
-    """The function inputs pandas dataframe and
-
+    """
+    The function inputs pandas dataframe and
     returns a modified dataframe that includes two new columns
-
     that contain information about the municipality and hashtag of the tweet.
 
 
     Arguments:
-
     The variable 'df' is the pandas input.
 
-    With added column of extracted hashtags from each tweet
+    Returns:
+    df with added column of extracted hashtags from each tweet
+    using 'mun_dict' dictionary and inserts the result into a new column
+    named 'municipality' in the same dataframe.
 
-    using 'mun_dict' dictionary and inserts
+    Example:
+    Prerequites:
+    >>> twitter_url = 'https://raw.githubusercontent.com/Explore-AI/Public-Data/master/Data/twitter_nov_2019.csv'
+    >>> twitter_df = pd.read_csv(twitter_url)
 
-    the result into a new column named 'municipality' in the same dataframe.
+    Inputs:
+    >>>twitter_df.copy().head()
+
+        Tweets	                                            Date
+    0	@BongaDlulane Please send an email to mediades...	2019-11-29 12:50:54
+    1	@saucy_mamiie Pls log a call on 0860037566	        2019-11-29 12:46:53
+    2	@BongaDlulane Query escalated to media desk.	     2019-11-29 12:46:10
+    3	Before leaving the office this afternoon, head...	2019-11-29 12:33:36
+    4	#ESKOMFREESTATE #MEDIASTATEMENT : ESKOM SUSPEN...	2019-11-29 12:17:43
+
+
+    >>>extract_municipality_hashtags(twitter_df.copy())
+    Output
+    	Tweets	                                            Date	            municipality	hashtags
+    0	@BongaDlulane Please send an email to mediades...	2019-11-29 12:50:54	NaN	            NaN
+    1	@saucy_mamiie Pls log a call on 0860037566	2019-11-29 12:46:53	NaN	NaN
+    2	@BongaDlulane Query escalated to media desk.	2019-11-29 12:46:10	NaN	NaN
+    3	Before leaving the office this afternoon, head...	2019-11-29 12:33:36	NaN	            NaN
+    4	#ESKOMFREESTATE #MEDIASTATEMENT : ESKOM SUSPEN...	2019-11-29 12:17:43	NaN	            [#eskomfreestate, #mediastatement]
+    ...	...	...	...	...
+    195	Eskom's Visitors Centres’ facilities include i...	2019-11-20 10:29:07	NaN	            NaN
+    196	#Eskom connected 400 houses and in the process...	2019-11-20 10:25:20	NaN	            [#eskom, #eskom, #poweringyourworld]
+    197	@ArthurGodbeer Is the power restored as yet?	2019-11-20 10:07:59	NaN	NaN
+    198	@MuthambiPaulina @SABCNewsOnline @IOL @eNCA @e...	2019-11-20 10:07:41	NaN	            NaN
+    199	RT @GP_DHS: The @GautengProvince made a commit...	2019-11-20 10:00:09	NaN	            NaN
 
     """
 
