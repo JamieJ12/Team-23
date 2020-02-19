@@ -5,10 +5,10 @@ setup(
     version='0.1',
     packages=find_packages(exclude=['tests*']),
     license='MIT',
-    description='EDSA example python package',
+    description='Functions of Eskom data metrics.',
     long_description=open('README.md').read(),
-    install_requires=['numpy'],
+    install_requires=['numpy'],['pandas'],
     url='https://github.com/JamieJ12/Team-23',
-    author='<Your Name>',
-    author_email='<Your Email>'
+    author='Team LeBron 23(Jamie Japhta, Mpumelelo Ndlovu, Precious Sekgathume, Amukelani Ngobeni, Mbuso Biyela)',
+    author_email='teamlebron23@gmail.com'
 )
