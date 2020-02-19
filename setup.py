@@ -7,7 +7,7 @@ setup(
     license='MIT',
     description='Functions of Eskom data metrics.',
     long_description=open('README.md').read(),
-    install_requires=['numpy'],
+    install_requires=['numpy'],['pandas'],
     url='https://github.com/JamieJ12/Team-23',
     author='Team LeBron 23(Jamie Japhta, Mpumelelo Ndlovu, Precious Sekgathume, Amukelani Ngobeni, Mbuso Biyela)',
     author_email='teamlebron23@gmail.com'
