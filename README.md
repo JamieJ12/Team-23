@@ -177,7 +177,7 @@ The function inputs pandas dataframe and
   ...	...	...	...	...
   195	Eskom's Visitors Centres’ facilities include i...	2019-11-20 10:29:07	NaN	NaN
   196	#Eskom connected 400 houses and in the process...	2019-11-20 10:25:20	NaN	[#eskom, #eskom, #poweringyourworld]
-  197	@ArthurGodbeer Is the power restored as yet?	     2019-11-20 10:07:59	NaN	NaN
+  197	@ArthurGodbeer Is the power restored as yet?	        2019-11-20 10:07:59	NaN	NaN
   198	@MuthambiPaulina @SABCNewsOnline @IOL @eNCA @e...	2019-11-20 10:07:41	NaN	NaN
   199	RT @GP_DHS: The @GautengProvince made a commit...	2019-11-20 10:00:09	NaN	NaN
   ```
