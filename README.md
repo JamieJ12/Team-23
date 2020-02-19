@@ -58,7 +58,7 @@ The role was to build 7 functions using python which will need to process both n
 
 
 
-      Function_4
+      ### Function_4
       The function inputs pandas dataframe and
 
         returns a modified dataframe that includes two new columns
@@ -91,7 +91,7 @@ The role was to build 7 functions using python which will need to process both n
 
           corresponding to the date and number of tweets, respectively.
 
-          The functiion returns the number of tweets per day.
+          The function returns the number of tweets per day.
 
 
 
@@ -105,26 +105,26 @@ The role was to build 7 functions using python which will need to process both n
 
             List is in the column named 'Splits Tweets'
 
-            Fuction takes in dataframe in the column named 'Tweets'
+            Function takes in dataframe in the column named 'Tweets'
 
 
             Returns a modified dataframe with a new column of a list of individual words
 
 
             ### Function_7
-              Function removes english stop words from a tweet.
+              Function removes English stop words from a tweet.
 
 
               Arguments:
 
-              Fucntion takes in pandas dataframe
+              Function takes in pandas dataframe
 
-              It tokenises the sentences according to the definition in function 6
+              It tokenisis the sentences according to the definition in function 6
 
 
-              Returns a modified dataframe with an added column of tweets without stopwords.
+              Returns a modified dataframe with an added column of tweets without stop_words.
 
-              """
+
 
 
 ##building these package locally
@@ -142,3 +142,11 @@ pip install --upgrade git+https://github.com/JamieJ12/Team-23
 ```
 ## license
 [MIT](https://choosealicense.com/licenses/mit/)
+
+## Collaborations
+### Team LeBron
+Precious Sekgathume
+Jamie Japhta
+Amukelani Ngobeni
+Mbuso Biyela
+Mpumelelo Ndlovu
