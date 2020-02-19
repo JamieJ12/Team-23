@@ -165,7 +165,7 @@ The function inputs pandas dataframe and
   ```
   Output
   ```bash
-    	Tweets	              Date	                  municipality	hashtags
+    	Tweets	                        Date	                  municipality	hashtags
 0	@BongaDlulane Please send an email to mediades...	2019-11-29 12:50:54	NaN	NaN
 1	@saucy_mamiie Pls log a call on 0860037566	2019-11-29 12:46:53	NaN	NaN
 2	@BongaDlulane Query escalated to media desk.	2019-11-29 12:46:10	NaN	NaN
