@@ -19,7 +19,7 @@ Function calculates the mean, median, variance, standard deviation,
     dictionary: with keys -- 'mean', 'median', 'std', 'var', 'min', and 'max',
     corresponding to the mean, median, standard deviation, variance,
     minimum and maximum of the input list
-
+    ```
     Example:
     Input:
     ```bash
