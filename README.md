@@ -1,4 +1,4 @@
-# Team-23---Analyze PREDICT ESKOMghfh
+# Team-23---Analyze PREDICT ESKOM
 This package was created to analyze data from ESKOM
 
 ##building these package locally
