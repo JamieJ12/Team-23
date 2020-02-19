@@ -22,6 +22,7 @@ Function calculates the mean, median, variance, standard deviation,
 
     Example:
     Input:
+    ```bash
     >>>gauteng = [39660.0,
                        36024.0,
                        32127.0,
@@ -42,7 +43,7 @@ Function calculates the mean, median, variance, standard deviation,
            'std': 10400.01,
            'min': 8842.0,
            'max': 39660.0}
-
+    ```
 
 
 ### Function_2
@@ -64,6 +65,7 @@ The Function takes in a list of integers and returns a dictionary
 
   Example:
   Input:
+  ```bash
   >>>gauteng = [39660.0,
                 36024.0,
                 32127.0,
@@ -84,7 +86,7 @@ The Function takes in a list of integers and returns a dictionary
       'min': 8842.0,
       'q1': 18653.0,
       'q3': 36372.0}
-
+  ```
 
 ### Function_3
 The Function inputs a
