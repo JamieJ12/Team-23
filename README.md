@@ -100,12 +100,15 @@ The Function inputs a
 
   Examples:
   Prequites:
+  ```bash
   >>> twitter_url = 'https://raw.githubusercontent.com/Explore-AI/Public-Data/master/Data/twitter_nov_2019.csv'
   >>> twitter_df = pd.read_csv(twitter_url)
   >>> dates = twitter_df['Date'].to_list()
+  ```
 
   Example 1:
   Input:
+  ```bash
   >>> dates[:3]
   ['2019-11-29 12:50:54',
   '2019-11-29 12:46:53',
@@ -113,9 +116,11 @@ The Function inputs a
 
   >>>date_parser(dates[:3])
   Output: ['2019-11-29', '2019-11-29', '2019-11-29']
+  ```
 
   Example 2:
   Input:
+  ```bash
   >>>dates[-3:]
   ['2019-11-20 10:07:59',
   '2019-11-20 10:07:41',
@@ -123,6 +128,7 @@ The Function inputs a
 
   >>>date_parser(dates[-3:])
   Output:['2019-11-20', '2019-11-20', '2019-11-20']
+  ```
 
 
 
@@ -142,6 +148,7 @@ The function inputs pandas dataframe and
 
   Example:
   Prerequites:
+  ```bash
   >>> twitter_url = 'https://raw.githubusercontent.com/Explore-AI/Public-Data/master/Data/twitter_nov_2019.csv'
   >>> twitter_df = pd.read_csv(twitter_url)
 
@@ -149,19 +156,19 @@ The function inputs pandas dataframe and
   >>>twitter_df.copy().head()
 
       Tweets	                                            Date
-  0	@BongaDlulane Please send an email to mediades...	2019-11-29 12:50:54
-  1	@saucy_mamiie Pls log a call on 0860037566	        2019-11-29 12:46:53
-  2	@BongaDlulane Query escalated to media desk.	     2019-11-29 12:46:10
-  3	Before leaving the office this afternoon, head...	2019-11-29 12:33:36
-  4	#ESKOMFREESTATE #MEDIASTATEMENT : ESKOM SUSPEN...	2019-11-29 12:17:43
+  0	@BongaDlulane Please send an email to mediades...	    2019-11-29 12:50:54
+  1	@saucy_mamiie Pls log a call on 0860037566	          2019-11-29 12:46:53
+  2	@BongaDlulane Query escalated to media desk.	        2019-11-29 12:46:10
+  3	Before leaving the office this afternoon, head...	    2019-11-29 12:33:36
+  4	#ESKOMFREESTATE #MEDIASTATEMENT : ESKOM SUSPEN...	    2019-11-29 12:17:43
 
 
   >>>extract_municipality_hashtags(twitter_df.copy())
   Output
     Tweets	                                            Date	            municipality	hashtags
   0	@BongaDlulane Please send an email to mediades...	2019-11-29 12:50:54	NaN	            NaN
-  1	@saucy_mamiie Pls log a call on 0860037566	2019-11-29 12:46:53	NaN	NaN
-  2	@BongaDlulane Query escalated to media desk.	2019-11-29 12:46:10	NaN	NaN
+  1	@saucy_mamiie Pls log a call on 0860037566	      2019-11-29 12:46:53	      NaN	            NaN
+  2	@BongaDlulane Query escalated to media desk.	    2019-11-29 12:46:10	    NaN	            NaN
   3	Before leaving the office this afternoon, head...	2019-11-29 12:33:36	NaN	            NaN
   4	#ESKOMFREESTATE #MEDIASTATEMENT : ESKOM SUSPEN...	2019-11-29 12:17:43	NaN	            [#eskomfreestate, #mediastatement]
   ...	...	...	...	...
@@ -170,7 +177,7 @@ The function inputs pandas dataframe and
   197	@ArthurGodbeer Is the power restored as yet?	2019-11-20 10:07:59	NaN	NaN
   198	@MuthambiPaulina @SABCNewsOnline @IOL @eNCA @e...	2019-11-20 10:07:41	NaN	            NaN
   199	RT @GP_DHS: The @GautengProvince made a commit...	2019-11-20 10:00:09	NaN	            NaN
-
+  ```
 
 
 ### Function_5
@@ -277,7 +284,7 @@ Function removes english stop words from a tweet.
 
       Tweets	                                            Date
   0	@BongaDlulane Please send an email to mediades...	2019-11-29 12:50:54
-  1	@saucy_mamiie Pls log a call on 0860037566	        2019-11-29 12:46:53
+  1	@usaucy_mamiie Pls log a call on 0860037566	        2019-11-29 12:46:53
   2	@BongaDlulane Query escalated to media desk.	     2019-11-29 12:46:10
   3	Before leaving the office this afternoon, head...	2019-11-29 12:33:36
   4	#ESKOMFREESTATE #MEDIASTATEMENT : ESKOM SUSPEN...	2019-11-29 12:17:43
