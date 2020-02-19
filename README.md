@@ -84,7 +84,7 @@ The Function takes in a list of integers and returns a dictionary
       'q3': 36372.0}
 ```
 ### Function_3
-The Function inputs a
+The Function inputs a list of dates and time
 
   Arguments:
       dates (list): list of date-time strings formatted as:
@@ -92,7 +92,7 @@ The Function inputs a
       The format : 'yyyy-mm-dd' represents the date and
       The format: 'hh:mm:ss' represents the time
 
-  The function returns a:list of strings where each element in the
+  The function returns a list of strings where each element in the
   returned list contains only the date in the 'yyyy-mm-dd' format.
 
   Examples:
