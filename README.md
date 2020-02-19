@@ -15,11 +15,12 @@ The role was to build 7 functions using python which will need to process both n
     items(list): list of integers
 
   Returns:
-    dictionary: with keys -- 'mean', 'median', 'std', 'var', 'min', and 'max',
+    Dictionary: with keys -- 'mean', 'median', 'std', 'var', 'min', and 'max',
     corresponding to the mean, median, standard deviation, variance,
     minimum and maximum of the input list
     Example:
     Input:
+    
     ```bash
     >>>gauteng = [39660.0,
                        36024.0,
@@ -35,7 +36,10 @@ The role was to build 7 functions using python which will need to process both n
                        25275.0]
 
     >>>dictionary_of_metrics(gauteng)
-    Output: {'mean': 26244.42,
+    ```
+    Output:
+    ```bash
+    {'mean': 26244.42,
            'median': 24403.5,
            'var': 108160153.17,
            'std': 10400.01,
