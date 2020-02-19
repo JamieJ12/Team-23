@@ -9,6 +9,6 @@ setup(
     long_description=open('README.md').read(),
     install_requires=['numpy'],
     url='https://github.com/JamieJ12/Team-23',
-    author='<Your Name>',
-    author_email='<Your Email>'
+    author='Team LeBron 23',
+    author_email='teamlebron23@gmail.com'
 )
