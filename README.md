@@ -22,108 +22,79 @@ The role was to build 7 functions using python which will need to process both n
 
 
 ### Function_2
+  The Function takes in a list of integers and returns a dictionary
+  of the 5 number summary.
 
-    The Function takes in a list of integers and returns a dictionary
+  Arguments:
 
-    of the 5 number summary.
+    items (list): List of integers
 
-    Arguments:
-
-      items (list): List of integers
-
-    The function returns a dictionary with keys: 'max', 'median', 'min',
+  The function returns a dictionary with keys: 'max', 'median', 'min',
 
     'q1', and 'q3', corresponding to the maximum, median, minimum,
-
-    first quartile and
-
-    third quartile, respectively.
+    first quartile and third quartile, respectively.
 
 
-      ### Function_3
+### Function_3
+  The Function inputs a list of date-time strings formatted as:
+  'yyyy-mm-dd hh:mm:ss'
 
+  The format : 'yyyy-mm-dd' represents the date and
 
-      The Function inputs a list of date-time strings formatted as:
+  The format: 'hh:mm:ss' represents the time
 
-          'yyyy-mm-dd hh:mm:ss'
-
-          The format : 'yyyy-mm-dd' represents the date and
-
-          The format: 'hh:mm:ss' represents the time
-
-      The function returns a:
-
-      list of strings where each element in the returned list contains
-
-      only the date in the 'yyyy-mm-dd' format.
+  The function returns a:
+  list of strings where each element in the returned list contains
+  only the date in the 'yyyy-mm-dd' format.
 
 
 
-      ### Function_4
-      The function inputs pandas dataframe and
-
-        returns a modified dataframe that includes two new columns
-
-        that contain information about the municipality and hashtag of the tweet.
+### Function_4
+  The function inputs pandas dataframe and returns a modified dataframe that includes two new columns that contain information about the municipality and hashtag of the tweet.
 
 
-        Arguments:
+  Arguments:
 
-        The variable 'df' is the pandas input.
+    The variable 'df' is the pandas input.
 
-        With added column of extracted hashtags from each tweet
-
-        using 'mun_dict' dictionary and inserts
-
-        the result into a new column named 'municipality' in the same dataframe.
+    With added column of extracted hashtags from each tweet using 'mun_dict' dictionary and inserts the result into a new column named 'municipality' in the same dataframe.
 
 
-        Function_5
+### Function_5
+  The function calculates the number of tweets that were posted per day.
 
-          The function calculates the number of tweets that were posted per day.
+  Arguments:
 
-          Arguments:
+    The index of the new dataframe is 'Date' in the format:
+    'yyyy-mm-dd', and the column of the new dataframe is 'Tweets', corresponding to the date and number of tweets, respectively.
 
-          The index of the new dataframe is 'Date' in the format:
-
-              'yyyy-mm-dd',
-
-          and the column of the new dataframe is 'Tweets',
-
-          corresponding to the date and number of tweets, respectively.
-
-          The function returns the number of tweets per day.
+    The function returns the number of tweets per day.
 
 
 
-    ### Function_6
+### Function_6
+  The function splits the sentences in a dataframe's column into a list of the separate words.:
 
-            The function splits the sentences in a dataframe's column into
+  Arguments:
 
-            a list of the separate words.:
+    List is in the column named 'Splits Tweets'
 
-            Arguments:
-
-            List is in the column named 'Splits Tweets'
-
-            Function takes in dataframe in the column named 'Tweets'
+  Function takes in dataframe in the column named 'Tweets'
 
 
-            Returns a modified dataframe with a new column of a list of individual words
+  Returns a modified dataframe with a new column of a list of individual words
 
 
-            ### Function_7
-              Function removes English stop words from a tweet.
+### Function_7
+  Function removes English stop words from a tweet.
+
+  Arguments:
+
+    Function takes in pandas dataframe
+    It tokenisis the sentences according to the definition in function 6
 
 
-              Arguments:
-
-              Function takes in pandas dataframe
-
-              It tokenisis the sentences according to the definition in function 6
-
-
-              Returns a modified dataframe with an added column of tweets without stop_words.
+  Returns a modified dataframe with an added column of tweets without stop_words.
 
 
 
