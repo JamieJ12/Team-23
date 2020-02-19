@@ -2,9 +2,27 @@
 import numpy as np
 import pandas as pd
 
+
+
 # Function 1
 def dictionary_of_metrics(items):
+    """
+    Function calculates the mean, median, variance, standard deviation,
+    minimum and maximum of the list of items.
 
+    The input is a list of integers and it ouputs a dictionary.
+
+    Arguments:
+
+      items(list): list of intergers
+
+    Returns:
+
+      dictinary: with keys -- 'mean', 'median', 'std', 'var', 'min', and 'max',
+      corresponding to the mean, median, standard deviation, variance,
+      minimum and maximum of the input list
+
+    """
     #Create a numpy array np_items from items
     np_items = np.array(items)
 
@@ -25,9 +43,27 @@ def dictionary_of_metrics(items):
             'max': round(mx,2)}
 
 
+
 # Function 2
 def five_num_summary(items):
+    """
+    The Function takes in a list of integers and returns a dictionary
 
+    of the 5 number summary.
+
+    Arguments:
+
+      items (list): List of integers
+
+    The function returns a dictionary with keys: 'max', 'median', 'min',
+
+    'q1', and 'q3', corresponding to the maximum, median, minimum,
+
+    first quartile and
+
+    third quartile, respectively.
+
+    """
     #Create a numpy array np_items from items
     np_items = np.array(items)
 
@@ -46,15 +82,52 @@ def five_num_summary(items):
             'q3': round(q3,2),}
 
 
+
 # Function 3
 def date_parser(dates):
+    """
 
+    The Function inputs a list of date-time strings formatted as:
+
+        'yyyy-mm-dd hh:mm:ss'
+
+        The format : 'yyyy-mm-dd' represents the date and
+
+        The format: 'hh:mm:ss' represents the time
+
+    The function returns a:
+
+    list of strings where each element in the returned list contains
+
+    only the date in the 'yyyy-mm-dd' format.
+
+
+    """
     # Split DateTime and Isolate Date
     return [date.split()[0] for date in dates]
 
 
+
 # Function 4
 def extract_municipality_hashtags(df):
+    """The function inputs pandas dataframe and
+
+    returns a modified dataframe that includes two new columns
+
+    that contain information about the municipality and hashtag of the tweet.
+
+
+    Arguments:
+
+    The variable 'df' is the pandas input.
+
+    With added column of extracted hashtags from each tweet
+
+    using 'mun_dict' dictionary and inserts
+
+    the result into a new column named 'municipality' in the same dataframe.
+
+    """
 
     # Dictionary mapping official municipality twitter handles to the municipality name
     mun_dict = {
@@ -106,8 +179,28 @@ def extract_municipality_hashtags(df):
     return df
 
 
+
 # Function 5
 def number_of_tweets_per_day(df):
+
+    """
+
+    The function calculates the number of tweets that were posted per day.
+
+    Arguments:
+
+    The index of the new dataframe is 'Date' in the format:
+
+        'yyyy-mm-dd',
+
+    and the column of the new dataframe is 'Tweets',
+
+    corresponding to the date and number of tweets, respectively.
+
+    The functiion returns the number of tweets per day.
+
+
+    """
 
     # Isolate Date from DateTime Format
     df["Date"] = date_parser(df["Date"].to_list())
@@ -121,6 +214,22 @@ def number_of_tweets_per_day(df):
 
 # Function 6
 def word_splitter(df):
+    """
+
+    The function splits the sentences in a dataframe's column into
+
+    a list of the separate words.:
+
+    Arguments:
+
+    List is in the column named 'Splits Tweets'
+
+    Fuction takes in dataframe in the column named 'Tweets'
+
+
+    Returns a modified dataframe with a new column of a list of individual words
+
+    """
 
     # Get Tweets from DataFrame
     tweets = df["Tweets"].to_list()
@@ -134,8 +243,25 @@ def word_splitter(df):
     return df
 
 
+
 # Function 7
 def stop_words_remover(df):
+
+    """
+    Function removes english stop words from a tweet.
+
+
+    Arguments:
+
+    Fucntion takes in pandas dataframe
+
+    It tokenises the sentences according to the definition in function 6
+
+
+    Returns a modified dataframe with an added column of tweets without stopwords.
+
+    """
+
     # dictionary of english stopwords
     stop_words_dict = {
         'stopwords':[
