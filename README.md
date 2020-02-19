@@ -145,8 +145,8 @@ pip install --upgrade git+https://github.com/JamieJ12/Team-23
 
 ## Collaborations
 ### Team LeBron
-Precious Sekgathume
-Jamie Japhta
-Amukelani Ngobeni
-Mbuso Biyela
+Precious Sekgathume \n
+Jamie Japhta \n
+Amukelani Ngobeni \n
+Mbuso Biyela \n
 Mpumelelo Ndlovu
