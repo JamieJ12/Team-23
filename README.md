@@ -156,7 +156,7 @@ The function inputs pandas dataframe and
   ```bash
   >>>twitter_df.copy().head()
 
-      Tweets	                                            Date
+      Tweets	                                           Date
   0	@BongaDlulane Please send an email to mediades...	    2019-11-29 12:50:54
   1	@saucy_mamiie Pls log a call on 0860037566	          2019-11-29 12:46:53
   2	@BongaDlulane Query escalated to media desk.	        2019-11-29 12:46:10
@@ -168,18 +168,18 @@ The function inputs pandas dataframe and
   ```
   Output
   ```bash
-    Tweets	                                          Date	            municipality	hashtags
-  0	@BongaDlulane Please send an email to mediades...	2019-11-29 12:50:54	NaN	            NaN
-  1	@saucy_mamiie Pls log a call on 0860037566	      2019-11-29 12:46:53	NaN	            NaN
-  2	@BongaDlulane Query escalated to media desk.	    2019-11-29 12:46:10	NaN	            NaN
-  3	Before leaving the office this afternoon, head...	2019-11-29 12:33:36	NaN	            NaN
-  4	#ESKOMFREESTATE #MEDIASTATEMENT : ESKOM SUSPEN...	2019-11-29 12:17:43	NaN	            [#eskomfreestate, #mediastatement]
+    Tweets	Date	municipality	hashtags
+  0	@BongaDlulane Please send an email to mediades...	2019-11-29 12:50:54	NaN	NaN
+  1	@saucy_mamiie Pls log a call on 0860037566	2019-11-29 12:46:53	NaN	NaN
+  2	@BongaDlulane Query escalated to media desk.	2019-11-29 12:46:10	NaN	NaN
+  3	Before leaving the office this afternoon, head...	2019-11-29 12:33:36	NaN	NaN
+  4	#ESKOMFREESTATE #MEDIASTATEMENT : ESKOM SUSPEN...	2019-11-29 12:17:43	NaN	[#eskomfreestate, #mediastatement]
   ...	...	...	...	...
-  195	Eskom's Visitors Centres’ facilities include i...	2019-11-20 10:29:07	NaN	            NaN
-  196	#Eskom connected 400 houses and in the process...	2019-11-20 10:25:20	NaN	            [#eskom, #eskom, #poweringyourworld]
+  195	Eskom's Visitors Centres’ facilities include i...	2019-11-20 10:29:07	NaN	NaN
+  196	#Eskom connected 400 houses and in the process...	2019-11-20 10:25:20	NaN	[#eskom, #eskom, #poweringyourworld]
   197	@ArthurGodbeer Is the power restored as yet?	2019-11-20 10:07:59	NaN	NaN
-  198	@MuthambiPaulina @SABCNewsOnline @IOL @eNCA @e...	2019-11-20 10:07:41	NaN	            NaN
-  199	RT @GP_DHS: The @GautengProvince made a commit...	2019-11-20 10:00:09	NaN	            NaN
+  198	@MuthambiPaulina @SABCNewsOnline @IOL @eNCA @e...	2019-11-20 10:07:41	NaN	NaN
+  199	RT @GP_DHS: The @GautengProvince made a commit...	2019-11-20 10:00:09	NaN	NaN
   ```
 
 
@@ -258,9 +258,9 @@ The function splits the sentences in a dataframe's column into
 
   >>>word_splitter(twitter_df.copy())
   Output
-      Tweets	                                            Date	            Split Tweets
+      Tweets	                                        Date	            Split Tweets
   0	@BongaDlulane Please send an email to mediades...	2019-11-29 12:50:54	[@bongadlulane, please, send, an, email, to, m...
-  1	@saucy_mamiie Pls log a call on 0860037566	        2019-11-29 12:46:53	[@saucy_mamiie, pls, log, a, call, on, 0860037...
+  1	@saucy_mamiie Pls log a call on 0860037566	      2019-11-29 12:46:53	[@saucy_mamiie, pls, log, a, call, on, 0860037...
   2	@BongaDlulane Query escalated to media desk.	    2019-11-29 12:46:10	[@bongadlulane, query, escalated, to, media, d...
   3	Before leaving the office this afternoon, head...	2019-11-29 12:33:36	[before, leaving, the, office, this, afternoon...
   4	#ESKOMFREESTATE #MEDIASTATEMENT : ESKOM SUSPEN...	2019-11-29 12:17:43	[#eskomfreestate, #mediastatement, :, eskom, s...
