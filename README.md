@@ -213,7 +213,9 @@ The function calculates the number of tweets that were posted per day.
   4	#ESKOMFREESTATE #MEDIASTATEMENT : ESKOM SUSPEN...	2019-11-29 12:17:43
 
   >>>number_of_tweets_per_day(twitter_df.copy())
+  ```
   Output
+  ```bash
               Tweets
   Date
   2019-11-20	18
@@ -257,7 +259,9 @@ The function splits the sentences in a dataframe's column into
 
 
   >>>word_splitter(twitter_df.copy())
+  ```
   Output
+  ```bash
       Tweets	                                        Date	            Split Tweets
   0	@BongaDlulane Please send an email to mediades...	2019-11-29 12:50:54	[@bongadlulane, please, send, an, email, to, m...
   1	@saucy_mamiie Pls log a call on 0860037566	      2019-11-29 12:46:53	[@saucy_mamiie, pls, log, a, call, on, 0860037...
@@ -298,7 +302,9 @@ Function removes english stop words from a tweet.
   4	#ESKOMFREESTATE #MEDIASTATEMENT : ESKOM SUSPEN...	2019-11-29 12:17:43
 
   >>>stop_words_remover(twitter_df.copy())
+  ```
   Output
+  ```bash
     Tweets	                                            Date	            Without Stop Words
   0	@BongaDlulane Please send an email to mediades...	2019-11-29 12:50:54	[@bongadlulane, send, email, mediadesk@eskom.c...
   1	@saucy_mamiie Pls log a call on 0860037566	        2019-11-29 12:46:53	[@saucy_mamiie, pls, log, 0860037566]
@@ -311,7 +317,6 @@ Function removes english stop words from a tweet.
   197	@ArthurGodbeer Is the power restored as yet?	    2019-11-20 10:07:59	[@arthurgodbeer, power, restored, yet?]
   198	@MuthambiPaulina @SABCNewsOnline @IOL @eNCA @e...	2019-11-20 10:07:41	[@muthambipaulina, @sabcnewsonline, @iol, @enc...
   199	RT @GP_DHS: The @GautengProvince made a commit...	2019-11-20 10:00:09	[rt, @gp_dhs:, @gautengprovince, commitment, e...
-  """
   ```
 
 
