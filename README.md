@@ -21,7 +21,6 @@ The role was to build 7 functions using python which will need to process both n
     Example:
     Input:
     
-    ```bash
     >>>gauteng = [39660.0,
                        36024.0,
                        32127.0,
