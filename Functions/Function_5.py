@@ -41,7 +41,7 @@ def number_of_tweets_per_day(df):
     2019-11-27	13
     2019-11-28	32
     2019-11-29	16
-    
+
     """
 
     # Isolate Date from DateTime Format

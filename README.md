@@ -216,29 +216,87 @@ The function calculates the number of tweets that were posted per day.
 
 
 ### Function_6
-  The function splits the sentences in a dataframe's column into a list of the separate words.:
+The function splits the sentences in a dataframe's column into
 
-  Arguments:
+  a list of the separate words.:
 
-    List is in the column named 'Splits Tweets'
+  Arguments: The variable 'df' is the pandas input.
 
-  Function takes in dataframe in the column named 'Tweets'
+  Returns: df with the added column named 'Splits Tweets'
 
 
-  Returns a modified dataframe with a new column of a list of individual words
+  Example:
+  Prerequites:
+  >>> twitter_url = 'https://raw.githubusercontent.com/Explore-AI/Public-Data/master/Data/twitter_nov_2019.csv'
+  >>> twitter_df = pd.read_csv(twitter_url)
+
+  Inputs:
+  >>>twitter_df.copy().head()
+
+      Tweets	                                            Date
+  0	@BongaDlulane Please send an email to mediades...	2019-11-29 12:50:54
+  1	@saucy_mamiie Pls log a call on 0860037566	        2019-11-29 12:46:53
+  2	@BongaDlulane Query escalated to media desk.	     2019-11-29 12:46:10
+  3	Before leaving the office this afternoon, head...	2019-11-29 12:33:36
+  4	#ESKOMFREESTATE #MEDIASTATEMENT : ESKOM SUSPEN...	2019-11-29 12:17:43
+
+
+  >>>word_splitter(twitter_df.copy())
+  Output
+      Tweets	                                            Date	            Split Tweets
+  0	@BongaDlulane Please send an email to mediades...	2019-11-29 12:50:54	[@bongadlulane, please, send, an, email, to, m...
+  1	@saucy_mamiie Pls log a call on 0860037566	        2019-11-29 12:46:53	[@saucy_mamiie, pls, log, a, call, on, 0860037...
+  2	@BongaDlulane Query escalated to media desk.	    2019-11-29 12:46:10	[@bongadlulane, query, escalated, to, media, d...
+  3	Before leaving the office this afternoon, head...	2019-11-29 12:33:36	[before, leaving, the, office, this, afternoon...
+  4	#ESKOMFREESTATE #MEDIASTATEMENT : ESKOM SUSPEN...	2019-11-29 12:17:43	[#eskomfreestate, #mediastatement, :, eskom, s...
+  ...	...	...	...
+  195	Eskom's Visitors Centresâ€™ facilities include i...	2019-11-20 10:29:07	[eskom's, visitors, centresâ€™, facilities, incl...
+  196	#Eskom connected 400 houses and in the process...	2019-11-20 10:25:20	[#eskom, connected, 400, houses, and, in, the,...
+  197	@ArthurGodbeer Is the power restored as yet?	    2019-11-20 10:07:59	[@arthurgodbeer, is, the, power, restored, as,...
+  198	@MuthambiPaulina @SABCNewsOnline @IOL @eNCA @e...	2019-11-20 10:07:41	[@muthambipaulina, @sabcnewsonline, @iol, @enc...
+  199	RT @GP_DHS: The @GautengProvince made a commit...	2019-11-20 10:00:09	[rt, @gp_dhs:, the, @gautengprovince, made, a,...
 
 
 ### Function_7
-  Function removes English stop words from a tweet.
-
-  Arguments:
-
-    Function takes in pandas dataframe
-    It tokenisis the sentences according to the definition in function 6
+Function removes english stop words from a tweet.
 
 
-  Returns a modified dataframe with an added column of tweets without stop_words.
+  Arguments: The variable 'df' is the pandas input.
+  Function takes in pandas dataframe
 
+
+  Returns:df, a modified dataframe with an added column of tweets without stopwords.
+
+  Example:
+  Prerequites:
+  >>> twitter_url = 'https://raw.githubusercontent.com/Explore-AI/Public-Data/master/Data/twitter_nov_2019.csv'
+  >>> twitter_df = pd.read_csv(twitter_url)
+
+  Inputs:
+  >>>twitter_df.copy().head()
+
+      Tweets	                                            Date
+  0	@BongaDlulane Please send an email to mediades...	2019-11-29 12:50:54
+  1	@saucy_mamiie Pls log a call on 0860037566	        2019-11-29 12:46:53
+  2	@BongaDlulane Query escalated to media desk.	     2019-11-29 12:46:10
+  3	Before leaving the office this afternoon, head...	2019-11-29 12:33:36
+  4	#ESKOMFREESTATE #MEDIASTATEMENT : ESKOM SUSPEN...	2019-11-29 12:17:43
+
+  >>>stop_words_remover(twitter_df.copy())
+  Output
+    Tweets	                                            Date	            Without Stop Words
+  0	@BongaDlulane Please send an email to mediades...	2019-11-29 12:50:54	[@bongadlulane, send, email, mediadesk@eskom.c...
+  1	@saucy_mamiie Pls log a call on 0860037566	        2019-11-29 12:46:53	[@saucy_mamiie, pls, log, 0860037566]
+  2	@BongaDlulane Query escalated to media desk.	    2019-11-29 12:46:10	[@bongadlulane, query, escalated, media, desk.]
+  3	Before leaving the office this afternoon, head...	2019-11-29 12:33:36	[leaving, office, afternoon,, heading, weekend...
+  4	#ESKOMFREESTATE #MEDIASTATEMENT : ESKOM SUSPEN...	2019-11-29 12:17:43	[#eskomfreestate, #mediastatement, :, eskom, s...
+  ...	...	...	...
+  195	Eskom's Visitors Centres’ facilities include i...	2019-11-20 10:29:07	[eskom's, visitors, centres’, facilities, incl...
+  196	#Eskom connected 400 houses and in the process...	2019-11-20 10:25:20	[#eskom, connected, 400, houses, process, conn...
+  197	@ArthurGodbeer Is the power restored as yet?	    2019-11-20 10:07:59	[@arthurgodbeer, power, restored, yet?]
+  198	@MuthambiPaulina @SABCNewsOnline @IOL @eNCA @e...	2019-11-20 10:07:41	[@muthambipaulina, @sabcnewsonline, @iol, @enc...
+  199	RT @GP_DHS: The @GautengProvince made a commit...	2019-11-20 10:00:09	[rt, @gp_dhs:, @gautengprovince, commitment, e...
+  """
 
 
 
