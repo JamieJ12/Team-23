@@ -3,7 +3,8 @@ This package was created to analyze data from ESKOM
 The role was to build 7 functions using python which will need to process both numeric and text data.
 
 ## Functions
- ### Function_1
+
+### Function_1
   Function calculates the mean, median, variance, standard deviation,
   minimum and maximum of the list of items.
 
@@ -20,7 +21,7 @@ The role was to build 7 functions using python which will need to process both n
     minimum and maximum of the input list
 
 
-  ### Function_2
+### Function_2
 
     The Function takes in a list of integers and returns a dictionary
 
