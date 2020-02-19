@@ -63,7 +63,7 @@ The Function takes in a list of integers and returns a dictionary
 
   Example:
   Input:
-  ````bash
+  ```bash
   >>>gauteng = [39660.0,
                 36024.0,
                 32127.0,
@@ -86,8 +86,7 @@ The Function takes in a list of integers and returns a dictionary
       'min': 8842.0,
       'q1': 18653.0,
       'q3': 36372.0}
-  ```
-
+```
 ### Function_3
 The Function inputs a
 
