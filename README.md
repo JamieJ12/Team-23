@@ -304,7 +304,7 @@ Function removes english stop words from a tweet.
   ```
   Output
   ```bash
-    Tweets	                                            Date	            Without Stop Words
+      Tweets	                                            Date	            Without Stop Words
   0	@BongaDlulane Please send an email to mediades...	2019-11-29 12:50:54	[@bongadlulane, send, email, mediadesk@eskom.c...
   1	@saucy_mamiie Pls log a call on 0860037566	        2019-11-29 12:46:53	[@saucy_mamiie, pls, log, 0860037566]
   2	@BongaDlulane Query escalated to media desk.	    2019-11-29 12:46:10	[@bongadlulane, query, escalated, media, desk.]
